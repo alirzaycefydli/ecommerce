@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Product;
 use App\Models\ProductImage;
+use App\Models\Review;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -37,6 +38,7 @@ class ProductFactory extends Factory
             $images = ProductImage::factory(rand(2, 5))->make(); //Generate random images between 2-5
             $images->first()->is_primary = true; //Set the first image as primary
             $product->images()->saveMany($images);
+            Review::factory()->count(5)->create(['product_id' => $product->id]);
         });
     }
 }

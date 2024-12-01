@@ -11,5 +11,5 @@ class ProductImage extends Model
     /** @use HasFactory<\Database\Factories\ProductImageFactory> */
     use HasFactory,HasUuids;
 
-    protected $fillable=['id','product_id','image_path','is_primary'];
+    protected $fillable=['product_id','image_path','is_primary'];
 }

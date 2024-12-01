@@ -15,11 +15,16 @@ class Product extends Model
     /** @use HasFactory<\Database\Factories\ProductFactory> */
     use HasFactory,HasUuids, Sluggable;
 
-    protected $fillable = ['id','title'.'slug','description','short_description','brand','price','quantity','discount_percent','is_confirmed','is_featured'];
+    protected $fillable = ['title'.'slug','description','short_description','brand','price','quantity','discount_percent','is_confirmed','is_featured'];
 
     public function images():HasMany
     {
         return $this->hasMany(ProductImage::class)->orderByDesc('is_primary');
+    }
+
+    public function reviews():HasMany
+    {
+        return $this->hasMany(Review::class)->orderBy('created_at');
     }
 
     /**
