@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Repositories\ProductRepository;
 use App\Models\Product;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
+use Illuminate\Foundation\Application;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 
@@ -23,16 +26,16 @@ class ProductController extends Controller
             return view('welcome', compact('products'));
         } catch (\Exception $exception) {
             Log::error('Error fetching featured products: ' . $exception->getMessage());
-            return view('welcome')->withErrors(['product' => $exception->getMessage()]);
+            return;
         }
     }
 
     public function show(Product $product)
     {
-
         try {
-            return $product->loadMissing('images');
-        }catch (\Exception $exception){
+            $product = $product->loadMissing('images');
+            return view('product.show', compact('product'));
+        } catch (\Exception $exception) {
             Log::error('Error fetching product details: ' . $exception->getMessage());
             return;
         }

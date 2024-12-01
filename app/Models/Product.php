@@ -51,4 +51,10 @@ class Product extends Model
             set: fn ($value) => $value * 100,
         )->withoutObjectCaching();
     }
+
+    public function discountedPrice(): Attribute{
+        return Attribute::make(
+            get: fn ($value) => $this->price * (1 - ($this->discount_percent / 100)),
+        );
+    }
 }

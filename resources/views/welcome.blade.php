@@ -1,4 +1,5 @@
 <x-app-layout>
+    <x-slider></x-slider>
     <!-- New Product Area Starts -->
     <section class="section-product-tabs overflow-hidden py-[50px] max-[1199px]:py-[35px]">
         <div
@@ -48,7 +49,7 @@
                                                         alt="{{$product->title}}">
                                                     <img
                                                         class="hover-img transition-all duration-[0.3s] ease-in-out absolute z-[2] top-[0] left-[0] opacity-[0] w-full"
-                                                        src="{{$product->primaryImage->image_path}}" alt="{{$product->title}}">
+                                                        src="{{$product->primaryImage?->image_path}}" alt="{{$product->title}}">
                                                 </div>
                                             </a>
                                             <ul
@@ -97,10 +98,10 @@
                                             <div class="bb-price flex flex-wrap justify-between">
                                                 <div class="inner-price mx-[-3px]">
                                                     <span
-                                                        class="old-price px-[3px] text-[14px] text-[#686e7d]">{{$product->discount_percent}}% OFF</span>
+                                                        class="old-price px-[3px] text-[14px] text-[#686e7d]">-{{$product->discount_percent}}%</span>
                                                 </div>
                                                 <span
-                                                    class="last-items text-[14px] text-[#686e7d]">${{number_format($product->price,2)}}</span>
+                                                    class="last-items text-[14px] text-[#686e7d]">${{number_format($product->discounted_price,2)}}</span>
                                             </div>
                                         </div>
                                     </div>

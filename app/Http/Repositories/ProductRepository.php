@@ -21,18 +21,4 @@ class ProductRepository
             ->get();
     }
 
-    /**
-     * Returns single product
-     * @param $product
-     * @return mixed
-     */
-    public function singleProduct($product): mixed
-    {
-        return $product;
-           /* ->where('slug', $product->slug)
-            ->where('is_confirmed', 1)
-            ->where('quantity', '>', 0)
-            ->with('images')
-            ->first();*/
-    }
 }
