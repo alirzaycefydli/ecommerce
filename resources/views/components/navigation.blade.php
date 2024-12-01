@@ -1,5 +1,3 @@
-
-
 <div class="bb-main-menu-desk py-[5px] border-t-[1px] border-solid border-[#eee] max-[991px]:hidden">
     <div
         class="flex flex-wrap justify-between relative items-center mx-auto min-[1400px]:max-w-[1320px] min-[1200px]:max-w-[1140px] min-[992px]:max-w-[960px] min-[768px]:max-w-[720px] min-[576px]:max-w-[540px]">
@@ -17,7 +15,7 @@
                             <li
                                 class="nav-item flex items-center font-Poppins text-[15px] text-[#686e7d] font-light leading-[28px] tracking-[0.03rem] mr-[35px]">
                                 <a class="nav-link p-[0] font-Poppins leading-[28px] text-[15px] font-medium text-[#3d4750] tracking-[0.03rem] block"
-                                   href="index.html">Home</a>
+                                   href="{{route('product.index')}}">Home</a>
                             </li>
                             <li class="nav-item bb-main-dropdown flex items-center mr-[45px]">
                                 <a class="nav-link bb-dropdown-item font-Poppins relative p-[0] leading-[28px] text-[15px] font-medium text-[#3d4750] block tracking-[0.03rem]"

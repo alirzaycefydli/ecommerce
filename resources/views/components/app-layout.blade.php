@@ -179,9 +179,6 @@
 </header>
 <!-- Header End-->
 
-<!-- Slider Starts-->
-<x-slider></x-slider>
-<!-- Slider Ends-->
 
 <!-- Main Section Starts-->
 {{$slot}}
