@@ -488,6 +488,7 @@
 <script src="{{ asset('js/vendor/owl.carousel.min.js') }}"></script>
 <script src="{{ asset('js/vendor/slick.min.js') }}"></script>
 <script src="{{ asset('js/vendor/jquery-range-ui.min.js') }}"></script>
+@yield('js')
 <!-- main-js -->
 <script src="{{ asset('js/main.js') }}"></script>
 </body>

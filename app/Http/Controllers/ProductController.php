@@ -33,7 +33,7 @@ class ProductController extends Controller
     public function show(Product $product)
     {
         try {
-            $product = $product->loadMissing('images');
+            $product = $product->loadMissing(['images','reviews']);
             return view('product.show', compact('product'));
         } catch (\Exception $exception) {
             Log::error('Error fetching product details: ' . $exception->getMessage());
