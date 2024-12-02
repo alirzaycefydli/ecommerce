@@ -118,7 +118,7 @@
                                                    href="login.html">Login</a></li>
                                         </ul>
                                     </div>
-                                    <a href="wishlist.html"
+                                    <a href="{{route('wishlist.index')}}"
                                        class="bb-header-btn bb-wish-toggle transition-all duration-[0.3s] ease-in-out relative flex w-[auto] items-center ml-[30px] max-[1199px]:ml-[20px]"
                                        title="Wishlist">
                                         <div class="header-icon relative flex">
