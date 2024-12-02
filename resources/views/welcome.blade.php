@@ -56,11 +56,14 @@
                                                 class="bb-pro-actions transition-all duration-[0.3s] ease-in-out my-[0] mx-[auto] absolute z-[9] left-[0] right-[0] bottom-[0] flex flex-row items-center justify-center opacity-[0]">
                                                 <li
                                                     class="bb-btn-group transition-all duration-[0.3s] ease-in-out w-[35px] h-[35px] mx-[2px] flex items-center justify-center text-[#fff] bg-[#fff] border-[1px] border-solid border-[#eee] rounded-[10px]">
-                                                    <a href="#" title="Add to Wishlist"
-                                                       class="w-[35px] h-[35px] flex items-center justify-center">
-                                                        <i
-                                                            class="ri-heart-line transition-all duration-[0.3s] ease-in-out text-[18px] text-[#777] leading-[10px]"></i>
-                                                    </a>
+                                                    <form action="{{route('wishlist.store',$product)}}" method="POST">
+                                                        @csrf
+                                                        <button title="Add to Wishlist"
+                                                                class="w-[35px] h-[35px] flex items-center justify-center">
+                                                            <i
+                                                                class="ri-heart-line transition-all duration-[0.3s] ease-in-out text-[18px] text-[#777] leading-[10px]"></i>
+                                                        </button>
+                                                    </form>
                                                 </li>
                                                 <li class="bb-btn-group transition-all duration-[0.3s] ease-in-out w-[35px] h-[35px] mx-[2px] flex items-center justify-center text-[#fff] bg-[#fff] border-[1px] border-solid border-[#eee] rounded-[10px]">
                                                     <form action="#" method="POST"
@@ -78,8 +81,7 @@
                                         </div>
                                         <div class="bb-pro-contact p-[20px]">
                                             <div class="bb-pro-subtitle mb-[8px] flex flex-wrap justify-between">
-                                                <a href="#"
-                                                   class="transition-all duration-[0.3s] ease-in-out font-Poppins text-[13px] leading-[16px] text-[#777] font-light tracking-[0.03rem]">{{$product->brand}}</a>
+                                                <p class="transition-all duration-[0.3s] ease-in-out font-Poppins text-[13px] leading-[16px] text-[#777] font-light tracking-[0.03rem]">{{$product->brand}}</p>
                                                 <span class="bb-pro-rating">
                                                 <i
                                                     class="ri-star-fill float-left text-[15px] mr-[3px] leading-[18px] text-[#fea99a]"></i>
