@@ -66,10 +66,10 @@
                                                     </form>
                                                 </li>
                                                 <li class="bb-btn-group transition-all duration-[0.3s] ease-in-out w-[35px] h-[35px] mx-[2px] flex items-center justify-center text-[#fff] bg-[#fff] border-[1px] border-solid border-[#eee] rounded-[10px]">
-                                                    <form action="#" method="POST"
+                                                    <form action="{{route('cart.store')}}" method="POST"
                                                           class="w-[35px] h-[35px] flex items-center justify-center">
                                                         @csrf
-                                                        <input type="hidden" name="product_id" value=""/>
+                                                        <input type="hidden" name="product_id" value="{{$product->id}}"/>
                                                         <input type="hidden" name="quantity" value="1"/>
                                                         <button type="submit" title="Add to Cart"
                                                                 class="w-[35px] h-[35px] flex items-center justify-center">
