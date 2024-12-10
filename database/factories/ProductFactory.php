@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Category;
 use App\Models\Product;
 use App\Models\ProductImage;
 use App\Models\Review;
@@ -39,6 +40,14 @@ class ProductFactory extends Factory
             $images->first()->is_primary = true; //Set the first image as primary
             $product->images()->saveMany($images);
             Review::factory()->count(5)->create(['product_id' => $product->id]);
+
+            // Attach categories
+            $parentCategory = Category::factory()->create();
+            $subcategories = Category::factory()->count(2)->withParent($parentCategory)->create();
+            // Attach product to a random subcategory
+            $product->categories()->sync($subcategories->pluck('id')->random(1));
         });
     }
+
+
 }

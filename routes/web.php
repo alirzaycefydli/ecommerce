@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\WishlistController;
@@ -24,3 +25,5 @@ Route::post('/cart', [CartController::class, 'store'])->name('cart.store');
 Route::put('/cart', [CartController::class, 'update'])->name('cart.update');
 Route::delete('cart/remove/{product}', [CartController::class,'destroy'])->name('cart.destroy');
 
+/*Route::get('categories}',[CategoryController::class,'index'])->name('category.index');*/
+Route::get('categories/{category:slug?}',[CategoryController::class,'index'])->name('category.index');

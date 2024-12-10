@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
@@ -15,7 +16,7 @@ class Product extends Model
     /** @use HasFactory<\Database\Factories\ProductFactory> */
     use HasFactory,HasUuids, Sluggable;
 
-    protected $fillable = ['title'.'slug','description','short_description','brand','price','quantity','discount_percent','is_confirmed','is_featured'];
+    protected $fillable = ['title','slug','description','short_description','brand','price','quantity','discount_percent','is_confirmed','is_featured'];
 
     public function images():HasMany
     {
@@ -25,6 +26,14 @@ class Product extends Model
     public function reviews():HasMany
     {
         return $this->hasMany(Review::class)->orderBy('created_at');
+    }
+
+    /**
+     * Category for this product
+     * */
+    public function categories(): BelongsToMany
+    {
+        return $this->belongsToMany(Category::class, 'category_product');
     }
 
     /**

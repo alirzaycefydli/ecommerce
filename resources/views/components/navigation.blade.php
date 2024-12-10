@@ -9,6 +9,7 @@
                             aria-expanded="false" aria-label="Toggle navigation">
                         <i class="ri-menu-2-line"></i>
                     </button>
+
                     <div class="bb-main-menu relative flex flex-[auto] justify-start max-[991px]:hidden"
                          id="navbarSupportedContent">
                         <ul class="navbar-nav flex flex-wrap flex-row ">
@@ -17,121 +18,23 @@
                                 <a class="nav-link p-[0] font-Poppins leading-[28px] text-[15px] font-medium text-[#3d4750] tracking-[0.03rem] block"
                                    href="{{route('product.index')}}">Home</a>
                             </li>
+
+
                             <li class="nav-item bb-main-dropdown flex items-center mr-[45px]">
                                 <a class="nav-link bb-dropdown-item font-Poppins relative p-[0] leading-[28px] text-[15px] font-medium text-[#3d4750] block tracking-[0.03rem]"
-                                   href="javascript:void(0)">Categories</a>
-                                <ul
-                                    class="mega-menu min-w-full transition-all duration-[0.3s] ease-in-out mt-[25px] pl-[30px] absolute top-[40px] z-[16] text-left opacity-[0] invisible left-[0] right-[auto] bg-[#fff] border-[1px] border-solid border-[#eee] flex flex-col rounded-[10px]">
-                                    <li class="m-[0] flex items-center">
-                                        <ul class="mega-block w-[calc(25%-30px)] mr-[30px] py-[15px]">
-                                            <li
-                                                class="menu_title border-b-[1px] border-solid border-[#eee] mb-[10px] pb-[5px] flex items-center leading-[28px]">
-                                                <a href="javascript:void(0)"
-                                                   class="transition-all duration-[0.3s] ease-in-out font-Poppins h-[auto] text-[#6c7fd8] text-[15px] font-medium tracking-[0.03rem] block py-[10px] leading-[22px] capitalize">Classic</a>
-                                            </li>
-                                            <li class="flex items-center leading-[28px]"><a
-                                                    href="shop-left-sidebar-col-3.html"
-                                                    class="transition-all duration-[0.3s] ease-in-out font-Poppins py-[10px] leading-[22px] text-[14px] font-normal tracking-[0.03rem] text-[#686e7d] hover:text-[#6c7fd8] capitalize">Left
-                                                    sidebar 3 column</a></li>
-                                            <li class="flex items-center leading-[28px]"><a
-                                                    href="shop-left-sidebar-col-4.html"
-                                                    class="transition-all duration-[0.3s] ease-in-out font-Poppins py-[10px] leading-[22px] text-[14px] font-normal tracking-[0.03rem] text-[#686e7d] hover:text-[#6c7fd8] capitalize">Left
-                                                    sidebar 4 column</a></li>
-                                            <li class="flex items-center leading-[28px]"><a
-                                                    href="shop-right-sidebar-col-3.html"
-                                                    class="transition-all duration-[0.3s] ease-in-out font-Poppins py-[10px] leading-[22px] text-[14px] font-normal tracking-[0.03rem] text-[#686e7d] hover:text-[#6c7fd8] capitalize">Right
-                                                    sidebar 3 column</a></li>
-                                            <li class="flex items-center leading-[28px]"><a
-                                                    href="shop-right-sidebar-col-4.html"
-                                                    class="transition-all duration-[0.3s] ease-in-out font-Poppins py-[10px] leading-[22px] text-[14px] font-normal tracking-[0.03rem] text-[#686e7d] hover:text-[#6c7fd8] capitalize">Right
-                                                    sidebar 4 column</a></li>
-                                            <li class="flex items-center leading-[28px]"><a
-                                                    href="shop-full-width.html"
-                                                    class="transition-all duration-[0.3s] ease-in-out font-Poppins py-[10px] leading-[22px] text-[14px] font-normal tracking-[0.03rem] text-[#686e7d] hover:text-[#6c7fd8] capitalize">Full
-                                                    width 4 column</a></li>
-                                        </ul>
-                                        <ul class="mega-block w-[calc(25%-30px)] mr-[30px] py-[15px]">
-                                            <li
-                                                class="menu_title border-b-[1px] border-solid border-[#eee] mb-[10px] pb-[5px] flex items-center leading-[28px]">
-                                                <a href="javascript:void(0)"
-                                                   class="transition-all duration-[0.3s] ease-in-out font-Poppins h-[auto] text-[#6c7fd8] text-[15px] font-medium tracking-[0.03rem] block py-[10px] leading-[22px] capitalize">Banner</a>
-                                            </li>
-                                            <li class="flex items-center leading-[28px]"><a
-                                                    href="shop-banner-left-sidebar-col-3.html"
-                                                    class="transition-all duration-[0.3s] ease-in-out font-Poppins py-[10px] leading-[22px] text-[14px] font-normal tracking-[0.03rem] text-[#686e7d] hover:text-[#6c7fd8] capitalize">left
-                                                    sidebar 3 column</a></li>
-                                            <li class="flex items-center leading-[28px]"><a
-                                                    href="shop-banner-left-sidebar-col-4.html"
-                                                    class="transition-all duration-[0.3s] ease-in-out font-Poppins py-[10px] leading-[22px] text-[14px] font-normal tracking-[0.03rem] text-[#686e7d] hover:text-[#6c7fd8] capitalize">left
-                                                    sidebar 4 column</a></li>
-                                            <li class="flex items-center leading-[28px]"><a
-                                                    href="shop-banner-right-sidebar-col-3.html"
-                                                    class="transition-all duration-[0.3s] ease-in-out font-Poppins py-[10px] leading-[22px] text-[14px] font-normal tracking-[0.03rem] text-[#686e7d] hover:text-[#6c7fd8] capitalize">right
-                                                    sidebar 3 column</a></li>
-                                            <li class="flex items-center leading-[28px]"><a
-                                                    href="shop-banner-right-sidebar-col-4.html"
-                                                    class="transition-all duration-[0.3s] ease-in-out font-Poppins py-[10px] leading-[22px] text-[14px] font-normal tracking-[0.03rem] text-[#686e7d] hover:text-[#6c7fd8] capitalize">right
-                                                    sidebar 4 column</a></li>
-                                            <li class="flex items-center leading-[28px]"><a
-                                                    href="shop-banner-full-width.html"
-                                                    class="transition-all duration-[0.3s] ease-in-out font-Poppins py-[10px] leading-[22px] text-[14px] font-normal tracking-[0.03rem] text-[#686e7d] hover:text-[#6c7fd8] capitalize">Full
-                                                    width 4 column</a></li>
-                                        </ul>
-                                        <ul class="mega-block w-[calc(25%-30px)] mr-[30px] py-[15px]">
-                                            <li
-                                                class="menu_title border-b-[1px] border-solid border-[#eee] mb-[10px] pb-[5px] flex items-center leading-[28px]">
-                                                <a href="javascript:void(0)"
-                                                   class="transition-all duration-[0.3s] ease-in-out font-Poppins h-[auto] text-[#6c7fd8] text-[15px] font-medium tracking-[0.03rem] block py-[10px] leading-[22px] capitalize">Columns</a>
-                                            </li>
-                                            <li class="flex items-center leading-[28px]"><a
-                                                    href="shop-full-width-col-3.html"
-                                                    class="transition-all duration-[0.3s] ease-in-out font-Poppins py-[10px] leading-[22px] text-[14px] font-normal tracking-[0.03rem] text-[#686e7d] hover:text-[#6c7fd8] capitalize">3
-                                                    Columns full width</a> </li>
-                                            <li class="flex items-center leading-[28px]"><a
-                                                    href="shop-full-width-col-4.html"
-                                                    class="transition-all duration-[0.3s] ease-in-out font-Poppins py-[10px] leading-[22px] text-[14px] font-normal tracking-[0.03rem] text-[#686e7d] hover:text-[#6c7fd8] capitalize">4
-                                                    Columns full width</a></li>
-                                            <li class="flex items-center leading-[28px]"><a
-                                                    href="shop-full-width-col-5.html"
-                                                    class="transition-all duration-[0.3s] ease-in-out font-Poppins py-[10px] leading-[22px] text-[14px] font-normal tracking-[0.03rem] text-[#686e7d] hover:text-[#6c7fd8] capitalize">5
-                                                    Columns full width</a></li>
-                                            <li class="flex items-center leading-[28px]"><a
-                                                    href="shop-full-width-col-6.html"
-                                                    class="transition-all duration-[0.3s] ease-in-out font-Poppins py-[10px] leading-[22px] text-[14px] font-normal tracking-[0.03rem] text-[#686e7d] hover:text-[#6c7fd8] capitalize">6
-                                                    Columns full width</a></li>
-                                            <li class="flex items-center leading-[28px]"><a
-                                                    href="shop-banner-full-width-col-3.html"
-                                                    class="transition-all duration-[0.3s] ease-in-out font-Poppins py-[10px] leading-[22px] text-[14px] font-normal tracking-[0.03rem] text-[#686e7d] hover:text-[#6c7fd8] capitalize">Banner
-                                                    3 Columns</a></li>
-                                        </ul>
-                                        <ul class="mega-block w-[calc(25%-30px)] mr-[30px] py-[15px]">
-                                            <li
-                                                class="menu_title border-b-[1px] border-solid border-[#eee] mb-[10px] pb-[5px] flex items-center leading-[28px]">
-                                                <a href="javascript:void(0)"
-                                                   class="transition-all duration-[0.3s] ease-in-out font-Poppins h-[auto] text-[#6c7fd8] text-[15px] font-medium tracking-[0.03rem] block py-[10px] leading-[22px] capitalize">List</a>
-                                            </li>
-                                            <li class="flex items-center leading-[28px]"><a
-                                                    href="shop-list-left-sidebar.html"
-                                                    class="transition-all duration-[0.3s] ease-in-out font-Poppins py-[10px] leading-[22px] text-[14px] font-normal tracking-[0.03rem] text-[#686e7d] hover:text-[#6c7fd8] capitalize">Shop
-                                                    left sidebar</a></li>
-                                            <li class="flex items-center leading-[28px]"><a
-                                                    href="shop-list-right-sidebar.html"
-                                                    class="transition-all duration-[0.3s] ease-in-out font-Poppins py-[10px] leading-[22px] text-[14px] font-normal tracking-[0.03rem] text-[#686e7d] hover:text-[#6c7fd8] capitalize">Shop
-                                                    right sidebar</a></li>
-                                            <li class="flex items-center leading-[28px]"><a
-                                                    href="shop-list-banner-left-sidebar.html"
-                                                    class="transition-all duration-[0.3s] ease-in-out font-Poppins py-[10px] leading-[22px] text-[14px] font-normal tracking-[0.03rem] text-[#686e7d] hover:text-[#6c7fd8] capitalize">Banner
-                                                    left sidebar</a></li>
-                                            <li class="flex items-center leading-[28px]"><a
-                                                    href="shop-list-banner-right-sidebar.html"
-                                                    class="transition-all duration-[0.3s] ease-in-out font-Poppins py-[10px] leading-[22px] text-[14px] font-normal tracking-[0.03rem] text-[#686e7d] hover:text-[#6c7fd8] capitalize">Banner
-                                                    right sidebar</a></li>
-                                            <li class="flex items-center leading-[28px]"><a
-                                                    href="shop-list-full-col-2.html"
-                                                    class="transition-all duration-[0.3s] ease-in-out font-Poppins py-[10px] leading-[22px] text-[14px] font-normal tracking-[0.03rem] text-[#686e7d] hover:text-[#6c7fd8] capitalize">Full
-                                                    width 2 columns</a></li>
-                                        </ul>
+                                   href="{{route('category.index')}}">Categories</a>
+                                <ul class="mega-menu min-w-full transition-all duration-[0.3s] ease-in-out mt-[25px] pl-[30px] absolute top-[40px] z-[16] text-left opacity-[0] invisible left-[0] right-[auto] bg-[#fff] border-[1px] border-solid border-[#eee] grid grid-cols-3 gap-[30px] rounded-[10px]">
+
+                                    <!-- Loop through categories (Main categories) -->
+                            @foreach($categories as $category)
+                                    <li class="flex items-center">
+                                        <a href="#"
+                                           class="transition-all duration-[0.3s] ease-in-out font-Poppins py-[10px] leading-[22px] text-[14px] font-normal tracking-[0.03rem] text-[#686e7d] hover:text-[#6c7fd8] capitalize">
+                                            {{$category->title}}
+                                        </a>
                                     </li>
+                                    @endforeach
+
                                 </ul>
                             </li>
 
@@ -155,7 +58,8 @@
                     class="menu_title font-Poppins flex items-center text-[16px] text-[#3d4750] font-semibold leading-[26px] tracking-[0.02rem]">My
                     Menu</span>
         <button type="button"
-                class="bb-close-menu relative border-[0] text-[30px] leading-[1] text-[#ff0000] bg-transparent">×</button>
+                class="bb-close-menu relative border-[0] text-[30px] leading-[1] text-[#ff0000] bg-transparent">×
+        </button>
     </div>
     <div class="bb-menu-inner">
         <div class="bb-menu-content">

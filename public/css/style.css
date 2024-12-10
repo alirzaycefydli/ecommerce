@@ -435,23 +435,23 @@ textarea::placeholder {
 
 /* Custom select */
 .select {
-  width: 100%;
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  font-size: 16px;
-  color: #fff;
+    width: 100%;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    font-size: 16px;
+    color: #fff;
 }
 
-select {
-  display: none;
-}
+/*select {
+    display: none;
+}*/
 
 .custom-select {
   color: #777;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
