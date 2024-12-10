@@ -55,7 +55,7 @@
                         <div class="cols bb-logo-detail flex max-[767px]:justify-between">
                             <!-- Header Logo Start -->
                             <div class="header-logo flex items-center max-[575px]:justify-center">
-                                <a href="index.html">
+                                <a href="{{route('product.index')}}">
                                     <img src="{{asset('img/logo/logo-dark.png')}}" alt="logo"
                                          class="dark w-[125px] max-[991px]:w-[115px] hidden">
                                 </a>

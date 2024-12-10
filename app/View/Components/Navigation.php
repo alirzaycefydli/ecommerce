@@ -2,6 +2,7 @@
 
 namespace App\View\Components;
 
+use App\Models\Category;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
@@ -21,6 +22,9 @@ class Navigation extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.navigation');
+        $categories = Category::whereNull('parent_category_id')
+            ->limit(12)
+            ->get();
+        return view('components.navigation', compact('categories'));
     }
 }
