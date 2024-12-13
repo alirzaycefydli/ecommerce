@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
@@ -17,13 +18,23 @@ Route::post('/review/{product}', [ReviewController::class, 'store'])->name('revi
 //Wishlists
 Route::get('/wishlist', [WishlistController::class, 'index'])->name('wishlist.index');
 Route::post('/add-to-wishlist/{product}', [WishlistController::class, 'store'])->name('wishlist.store');
-Route::delete('wishlist/remove/{product}', [WishlistController::class,'destroy'])->name('wishlist.destroy');
+Route::delete('wishlist/remove/{product}', [WishlistController::class, 'destroy'])->name('wishlist.destroy');
 
 //Cart
 Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
 Route::post('/cart', [CartController::class, 'store'])->name('cart.store');
 Route::put('/cart', [CartController::class, 'update'])->name('cart.update');
-Route::delete('cart/remove/{product}', [CartController::class,'destroy'])->name('cart.destroy');
+Route::delete('cart/remove/{product}', [CartController::class, 'destroy'])->name('cart.destroy');
 
-/*Route::get('categories}',[CategoryController::class,'index'])->name('category.index');*/
-Route::get('categories/{category:slug?}',[CategoryController::class,'index'])->name('category.index');
+//Categories
+Route::get('categories/{category:slug?}', [CategoryController::class, 'index'])->name('category.index');
+
+//Auth
+Route::get('/login', [AuthController::class, 'login'])->name('login');
+Route::post('/login', [AuthController::class, 'loginUser'])->name('auth.login');
+Route::get('/register', [AuthController::class, 'register'])->name('register');
+Route::post('/register', [AuthController::class, 'registerUser'])->name('auth.register');
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::post('/logout', [AuthController::class, 'logout'])->name('auth.logout');
+});
