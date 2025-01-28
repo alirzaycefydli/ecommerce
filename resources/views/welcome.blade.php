@@ -17,8 +17,6 @@
                                 class="font-Poppins max-w-[400px] mt-[10px] text-[14px] text-[#686e7d] leading-[18px] font-light tracking-[0.03rem] max-[991px]:mx-[auto]">
                                 Shop online for new arrivals and get free shipping!</p>
                         </div>
-
-
                     </div>
                 </div>
             </div>
@@ -28,7 +26,6 @@
                     <div class="tab-content">
                         <div class="flex flex-wrap w-full">
                             @foreach($products as $product)
-
                                 <div
                                     class="min-[1200px]:w-[25%] min-[768px]:w-[33.33%] w-[50%] max-[480px]:w-full px-[12px] mb-[24px]"
                                     data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Repositories\CartRepository;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Session;
 
 class CartController extends Controller
@@ -23,18 +24,17 @@ class CartController extends Controller
 
     public function store(Request $request)
     {
-        $products = $this->cartRepository->addToCart($request);
-        //dd(session('cart-items'));
+        $this->cartRepository->addToCart($request);
         return redirect()->route('cart.index')->with('success', 'Product added to cart');
     }
 
     public function update(Request $request)
     {
-        //$products = $this->cartRepository->updateCart($request);
+
+        $products = $this->cartRepository->updateCart($request);
         //return redirect()->route('cart.index')->with('success', 'Product updated successfully');
 
-
-        // Validate input
+      /*  // Validate input
         $validated = $request->validate([
             'product_id' => 'required|exists:products,id',
             'quantity' => 'required|integer|min:1',
@@ -50,7 +50,7 @@ class CartController extends Controller
             session(['cart-items' => $cart]);
             return response()->json(['success' => true]);
         }
-        return 'error';
+        return 'error';*/
     }
 
     public function destroy($product)
